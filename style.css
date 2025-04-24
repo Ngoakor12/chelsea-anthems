@@ -1,0 +1,76 @@
+html {
+  box-sizing: border-box;
+}
+
+nav a {
+  color: white;
+}
+
+nav a:hover {
+  color: gold;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+body {
+  margin: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.container {
+  background-color: royalblue;
+  max-width: 1000px;
+  padding: 100px;
+  display: grid;
+  grid-template-columns: 4;
+  gap: 40px;
+}
+
+header {
+  grid-column: span 4; /* spans all 4 columns */
+}
+
+nav {
+  grid-column: span 1; /* takes 1 column */
+}
+
+main {
+  grid-column: span 3; /* takes remaining 3 columns */
+  max-width: 400px;
+  background-color: white;
+  color: royalblue;
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+p {
+  margin: 0;
+}
+span {
+  background-color: goldenrod;
+}
+span:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  nav {
+    grid-column: span 4;
+  }
+
+  .container {
+    padding: 50px;
+    gap: 20px;
+  }
+}
